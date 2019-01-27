@@ -1,0 +1,84 @@
+
+ILI9341 Test!
+Display Power Mode: 0xCA
+MADCTL Mode: 0xA4
+Pixel Format: 0x82
+Image Format: 0xC0
+Self Diagnostic: 0xE0
+Benchmark                Time (microseconds)
+Screen fill              160264
+Text                     93382
+Lines                    1012390
+Horiz/Vert Lines         20232
+Rectangles (outline)     15808
+Rectangles (filled)      335810
+Circles (filled)         253780
+Circles (outline)        443778
+Triangles (outline)      216793
+Triangles (filled)       233333
+Rounded rects (outline)  140469
+Rounded rects (filled)   445781
+Done!
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+up_assert: Assertion failed at file:semaphore/sem_post.c line: 118 task: init
+up_dumpstate: sp:     0d03d7fc
+up_dumpstate: IRQ stack:
+up_dumpstate:   base: 0d034f00
+up_dumpstate:   size: 00000800
+up_dumpstate:   used: 000000f8
+up_dumpstate: User stack:
+up_dumpstate:   base: 0d03d8a8
+up_dumpstate:   size: 00001fec
+up_dumpstate:   used: 000002b8
+up_stackdump: 0d03d7e0: 00000098 00000098 0000007c 00000000 0000007c 00000098 00000001 00000014
+up_stackdump: 0d03d800: 00000000 0d0076c7 0d02fe98 0d00f0a9 0d0332d4 0d00390d 0d030c00 0d00185f
+up_stackdump: 0d03d820: 000007e0 000007e0 00000001 0d001805 0d0290ca 0d030c00 0d0290b5 0d004e65
+up_stackdump: 0d03d840: 000f4240 0d030c00 0d030c00 0d000000 0d02d55c 0d004ea1 000f4240 0d030c00
+up_stackdump: 0d03d860: 0c214ce2 0d0029d9 00000000 00000001 0d030c00 0d002a4d 0d043a38 0d02d570
+up_stackdump: 0d03d880: 0d02d570 0d004ad5 0d0103cf 00000101 00000000 00000000 00000000 0d007e73
+up_stackdump: 0d03d8a0: 00000000 00000000 deadbeef 0d03d8b4 00000000 74696e69 deadbe00 e66e86f2
+up_taskdump: Idle Task: PID=0 Stack Used=0 of 0
+up_taskdump: hpwork: PID=1 Stack Used=584 of 2028
+up_taskdump: lpwork: PID=2 Stack Used=352 of 2028
+up_taskdump: lpwork: PID=3 Stack Used=352 of 2028
+up_taskdump: lpwork: PID=4 Stack Used=352 of 2028
+up_taskdump: init: PID=5 Stack Used=696 of 8172
+up_taskdump: cxd56_pm_task: PID=6 Stack Used=320 of 996
+up_taskdump: <pthread>: PID=7 Stack Used=312 of 1020

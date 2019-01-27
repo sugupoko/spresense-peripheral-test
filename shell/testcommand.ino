@@ -14,7 +14,8 @@ void shell_cmdregister(void)
   shell_register(ble_task, PSTR("ble"));
   shell_register(cam_task, PSTR("cam"));
   shell_register(audplay_task, PSTR("audplay"));
-  shell_register(audrec_task, PSTR("audrec"));
+  //shell_register(audrec_task, PSTR("audrec"));
+  shell_register(lcd_task, PSTR("lcd"));
 }
 
 
@@ -243,15 +244,15 @@ int audplay_task(int argc, char** argv)
  * @enum ParamSat
  * @brief Satellite system
  */
-int audrec_task(int argc, char** argv)
+int lcd_task(int argc, char** argv)
 {
   char c;
-  audrec_setup();
+  lcd_setup();
 
   Serial.println("If you want to stop, please press E. ");
   for(;;) 
   {
-    audrec_loop();
+    lcd_loop();
 
     if (Serial.available() > 0) {
         c = Serial.read();
@@ -264,7 +265,6 @@ int audrec_task(int argc, char** argv)
   return SHELL_RET_SUCCESS;
 
 }
-
 
 
 
