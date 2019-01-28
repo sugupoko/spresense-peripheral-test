@@ -1,0 +1,6 @@
+{
+    "port": "COM3",
+    "board": "SPRESENSE:spresense:spresense",
+    "configuration": "Debug=Disabled,UploadSpeed=115200",
+    "sketch": "camtolcd.ino"
+}

@@ -1,0 +1,6 @@
+{
+    "port": "COM3",
+    "board": "SPRESENSE:spresense:spresense",
+    "configuration": "Debug=Disabled,UploadSpeed=115200",
+    "sketch": "Sony_mock_ili9341.ino"
+}
