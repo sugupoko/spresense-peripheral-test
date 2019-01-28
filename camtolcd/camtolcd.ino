@@ -47,25 +47,8 @@ void CamCB(CamImage img)
 
       img.convertPixFormat(CAM_IMAGE_PIX_FMT_RGB565);
 
-      /* You can use image data directly by using getImgSize() and getImgBuff().
-       * for displaying image to a display, etc. */
+      tft.drawRGBBitmap(0,0, (uint16_t *)img.getImgBuff(),(int16_t)img.getWidth(), (int16_t)img.getHeight());
 
-      Serial.print("Image data size = ");
-      Serial.print(img.getImgSize(), DEC);
-      Serial.print(" , ");
-
-      Serial.print("buff addr = ");
-      Serial.print((unsigned long)img.getImgBuff(), HEX);
-      Serial.println("");
-
-      Serial.print("getWidth = ");
-      Serial.print((unsigned long)img.getWidth(), DEC);
-      Serial.print(" , ");
-
-      Serial.print("getHeight = ");
-      Serial.print((unsigned long)img.getHeight(), DEC);
-      Serial.println("");
-      drawimage(img);
     }
   else
     {
@@ -73,24 +56,6 @@ void CamCB(CamImage img)
     }
 }
 
-void drawimage(CamImage img)
-{
-  int x,y,bx,by,i;
-  uint16_t *pImg;
-  y = img.getHeight();
-  x = img.getWidth();
-  pImg = (uint16_t *)img.getImgBuff();
-
-   for(by = 0; by < y; by++)
-   {
-     for(bx = 0; bx < x; bx++)
-     {
-       i = bx + by * x;
-       tft.drawPixel(bx,by,pImg[i]); 
-     }
-   }
-
-}
 
 void setup() {
   Serial.begin(9600);
