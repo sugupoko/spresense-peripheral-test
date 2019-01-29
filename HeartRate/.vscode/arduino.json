@@ -1,0 +1,6 @@
+{
+    "port": "COM4",
+    "board": "SPRESENSE:spresense:spresense",
+    "configuration": "Debug=Disabled,UploadSpeed=115200",
+    "sketch": "HeartRate.ino"
+}
