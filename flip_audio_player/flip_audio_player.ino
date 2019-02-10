@@ -26,7 +26,7 @@
 #define AUDIO_STOP              1
 #define PIN_BTN                 15
 #define FLIP_THRETHOLD_STOP     -0.7
-#define FLIP_THRETHOLD_PLAY     0.8
+#define FLIP_THRETHOLD_PLAY     0.7
 
 SDClass theSD;
 AudioClass *theAudio;
@@ -67,8 +67,6 @@ static void audio_attention_cb(const ErrorAttentionParam *atprm)
  */
 void setup()
 {
-  pinMode(PIN_BTN, INPUT);
-
   audio_init();
   Acceleration_init();
 }
