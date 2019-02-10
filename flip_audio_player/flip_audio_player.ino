@@ -114,7 +114,7 @@ void audio_play(void)
 
   if (!myFile)
   {
-    fileopen();
+    audio_fileopen();
   }
   /* Send new frames to decode in a loop until file ends */
   int err = theAudio->writeFrames(AudioClass::Player0, myFile);
@@ -123,7 +123,7 @@ void audio_play(void)
   if (err == AUDIOLIB_ECODE_FILEEND)
     {
       printf("Main player File End!\n");
-      fileopen();
+      audio_fileopen();
     }
 
   /* Show error code from player and stop */
@@ -215,7 +215,7 @@ void check_flip(void)
    }
 }
 
-void fileopen()
+void audio_fileopen()
 {
   myFile.close();
   myFile = theSD.open("moon.mp3");
